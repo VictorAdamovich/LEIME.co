@@ -1,0 +1,16 @@
+version: '3.4'
+x-restart-policy: &restart_policy
+  restart: always
+
+services:
+  front:
+    image: $IMAGE
+    << : *restart_policy
+    command: yarn start
+    ports:
+      - "30002:3000"
+    labels:
+      SERVICE_NAME: "" #domain name
+      SERVICE_3000_ENV: "$SERVICE_ENV_LABEL"
+      SERVICE_3000_TAGS: "$SERVICE_TAGS_LABEL"
+      SERVICE_3000_WS: "true"

@@ -1,0 +1,51 @@
+---
+deploy:
+  environment:
+    develop:
+      branch: develop
+      variables:
+        - NODE_CONFIG_ENV: "$CI_ENVIRONMENT_NAME"
+        - SERVICE_ENV_LABEL: "dev"
+        - SERVICE_TAGS_LABEL: "web"
+      docker_stack_server: #user@ip_address
+    staging:
+      branch: staging
+      variables:
+        - NODE_CONFIG_ENV: "$CI_ENVIRONMENT_NAME"
+        - SERVICE_ENV_LABEL: "stage"
+        - SERVICE_TAGS_LABEL: "web"
+      docker_stack_server: #user@ip_address
+    production:
+        branch: production
+      variables:
+        - NODE_CONFIG_ENV: "$CI_ENVIRONMENT_NAME"
+        - SERVICE_ENV_LABEL: "stage"
+        - SERVICE_TAGS_LABEL: "web"
+      docker_stack_server: #user@ip_address
+
+apps:
+  frontend:
+    image: node:18.19.0-alpine
+    runner_tags:
+      - docker
+    code_analysis:
+      dtrack: true
+      commands:
+        - export NPM_CONFIG_USERCONFIG=$NPMRC
+        - yarn install --frozen-lockfile
+        - yarn lint
+    build: false
+    docker_build:
+      secrets:
+        - $NPMRC
+      env_docker_tag: true
+      runner_tags:
+        - docker
+      build_arg:
+        - BUILD_BRANCH=$CI_COMMIT_REF_NAME
+        - ENV_BRANCHES="develop staging production" 
+      # before_script:
+      #   - cat $SECRETS >> .env.$CI_COMMIT_REF_NAME
+    test_docker: false
+    deploy:
+      docker_stack: true
