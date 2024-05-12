@@ -3,6 +3,7 @@
 
 .wrapper {
   position: relative;
+  margin-bottom: 96px;
 
   .slide {
     display: flex;
@@ -25,9 +26,6 @@
       height: 183px;
     }
   }
-
-
-
 
   .left,
   .right {
