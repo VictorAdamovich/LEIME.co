@@ -21,13 +21,16 @@ function Info({ logo, socialLinks }: Props) {
   return (
     <div className={styles.info}>
       <Logo {...logo} className={styles.logo} />
-
       <div className={styles.contactsWrapper}>
         <div className={styles.address}>
           <p className={styles.title}>Address:</p>
-          <p>28 Jackson Btvd Ste</p>
-          <p>1020 Chicago</p>
-          <p>IL 60604-2340</p>
+          <p>
+            28 Jackson Btvd Ste
+            <br />
+            1020 Chicago
+            <br />
+            IL 60604-2340
+          </p>
         </div>
         <div className={styles.contacts}>
           <p className={styles.title}>Phone:</p>
@@ -38,7 +41,7 @@ function Info({ logo, socialLinks }: Props) {
       </div>
       <div className={styles.social}>
         {socialLinks.map((link) => (
-          <Link key={link.src} href={link.href} target="blanc" rel="noopener">
+          <Link key={link.src} href={link.href} target="_blank" rel="noopener">
             <Image
               className={styles.socialIcon}
               width={link.width}

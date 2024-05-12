@@ -1,3 +1,6 @@
+@import 'styles/helpers/variables';
+@import 'styles/helpers/typography';
+
 .info {
   .logo {
     margin-bottom: 10.5px;
@@ -8,6 +11,11 @@
     display: flex;
     margin-bottom: 25.5px;
     gap: 44px;
+
+    @include media-breakpoint-down($layoutBreakpointMedium) {
+      justify-content: center;
+      margin-bottom: 0;
+    }
 
     .address,
     .contacts {
@@ -27,11 +35,41 @@
         line-height: 24px;
       }
     }
+
+    .address {
+      @include media-breakpoint-down($layoutBreakpointMedium) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        text-align: center;
+        font-family: Arial;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+
+        .title {
+          display: flex;
+          justify-content: center;
+        }
+      }
+
+    }
+
+    .contacts {
+      @include media-breakpoint-down($layoutBreakpointMedium) {
+        display: none;
+      }
+    }
   }
 
   .social {
     display: flex;
     gap: 10px;
+
+    @include media-breakpoint-down($layoutBreakpointMedium) {
+      display: none;
+    }
 
     .socialIcon {
       img {

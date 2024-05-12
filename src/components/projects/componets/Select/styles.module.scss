@@ -1,10 +1,20 @@
+@import 'styles/helpers/variables';
+@import 'styles/helpers/typography';
+
 .btnsWrapper {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
   gap: 35px;
+  @include media-breakpoint-down($layoutBreakpointMedium) {
+    align-items: center;
+    flex-direction: column;
+    gap: 10.8px;
+
+  }
 
   .btn {
+    width: fit-content;
     text-align: left;
     letter-spacing: .7px;
     text-transform: uppercase;

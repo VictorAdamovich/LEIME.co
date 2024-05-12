@@ -22,7 +22,7 @@ function Logo({ mainIcon, logoTitleIcon, logoDescription, className = '' }: Prop
         src={mainIcon.src}
         alt={mainIcon.alt}
       />
-      <div>
+      <div className={styles.logoContent}>
         <Image
           className={styles.logoTitleIcon}
           width={logoTitleIcon.width}

@@ -21,14 +21,14 @@ function Blog({ blogs }: Props) {
     <div className={styles.blog}>
       <h5 className={styles.title}>Latest from the blog</h5>
       <div className={styles.posts}>
-        {blogs.map((blog) => (
-          <div key={blog.title} className={styles.post}>
+        {blogs.map(({ avatar, date, title }) => (
+          <div key={title} className={styles.post}>
             <Image
               className={styles.image}
-              width={blog.avatar.width}
-              height={blog.avatar.height}
-              src={blog.avatar.src}
-              alt={blog.avatar.alt}
+              width={avatar.width}
+              height={avatar.height}
+              src={avatar.src}
+              alt={avatar.alt}
             />
             <div className={styles.content}>
               <p className={styles.postDate}>
@@ -39,10 +39,9 @@ function Blog({ blogs }: Props) {
                   src="/images/footer/social/arrow.png"
                   alt="arrow"
                 />
-
-                {format(blog.date, DATE_FORMAT)}
+                {format(date, DATE_FORMAT)}
               </p>
-              <p className={styles.postTitle}>{blog.title}</p>
+              <p className={styles.postTitle}>{title}</p>
             </div>
           </div>
         ))}

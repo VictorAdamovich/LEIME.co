@@ -1,7 +1,17 @@
+@import 'styles/helpers/variables';
+@import 'styles/helpers/typography';
+
 .wrapper {
   display: grid;
   grid-gap: 35px;
   grid-template-columns: repeat(4, 1fr);
+  @include media-breakpoint-down($layoutBreakpointLarge) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include media-breakpoint-down($layoutBreakpointMedium) {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 52px;
+  }
 
   .feature {
     .iconWrapper {

@@ -1,3 +1,6 @@
+@import 'styles/helpers/variables';
+@import 'styles/helpers/typography';
+
 .privacy {
   display: flex;
   justify-content: center;
@@ -7,6 +10,9 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
+  @include media-breakpoint-down($layoutBreakpointMedium) {
+    display: none;
+  }
 
   .link {
     text-decoration: underline;

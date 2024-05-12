@@ -1,5 +1,11 @@
+@import 'styles/helpers/variables';
+@import 'styles/helpers/typography';
+
 .contactUS {
   margin-bottom: 50px;
+  @include media-breakpoint-down($layoutBreakpointMedium) {
+    display: none;
+  }
 
   .title {
     margin-bottom: 20.5px;
