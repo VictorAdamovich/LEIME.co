@@ -1,4 +1,35 @@
 .btnsWrapper {
   display: flex;
   justify-content: center;
+  margin-bottom: 50px;
+  gap: 35px;
+
+  .btn {
+    text-align: left;
+    letter-spacing: .7px;
+    text-transform: uppercase;
+    color: #6E6E6E;
+    border: none;
+    background-color: transparent;
+    font-family: Arial;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 19.5px;
+
+
+    &.active {
+      position: relative;
+      color: #000;
+
+      &::after {
+        position: absolute;
+        bottom: -6px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        content: '';
+        background-color: #4B4A4A;
+      }
+    }
+  }
 }

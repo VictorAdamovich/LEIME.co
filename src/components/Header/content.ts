@@ -15,9 +15,9 @@ export const CONTENT = {
     logoDescription: 'May the Joomla be with you',
   },
   navigation: [
-    { title: 'Home', href: '' },
-    { title: 'Features', href: '' },
-    { title: 'Portfolio', href: '' },
-    { title: 'Blog', href: '' },
+    { title: 'Home', href: '/' },
+    { title: 'Features', href: '#Features' },
+    { title: 'Portfolio', href: '#Portfolio' },
+    { title: 'Blog', href: '#Blog' },
   ],
 };

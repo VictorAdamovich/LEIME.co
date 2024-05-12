@@ -1,5 +1,4 @@
 import React, { memo } from 'react';
-import { Button } from '@mui/material';
 import clsx from 'clsx';
 
 import styles from './styles.module.scss';
@@ -25,14 +24,14 @@ function Select({ categories, activeCategory, setActiveCategory }: Props) {
         const isActive = activeCategory === index;
 
         return (
-          <Button
+          <button
+            type="button"
             key={category.title}
             className={clsx(styles.btn, { [styles.active]: isActive })}
-            variant={isActive ? 'outlined' : 'text'}
             onClick={() => setActiveCategory(index)}
           >
             {category.title}
-          </Button>
+          </button>
         );
       })}
     </div>

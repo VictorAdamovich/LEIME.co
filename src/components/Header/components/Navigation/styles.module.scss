@@ -6,10 +6,26 @@
   gap: 35px;
 
   .listItem {
+    position: relative;
     border-bottom: 2px solid transparent;
 
+    .link {
+      text-decoration: none;
+      color: #000;
+    }
+
     &.active {
-      border-bottom: 2px solid #17BFBF;
+      position: relative;
+
+      &::after {
+        position: absolute;
+        bottom: -6px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        content: '';
+        background-color: #17BFBF;
+      }
     }
   }
 }
