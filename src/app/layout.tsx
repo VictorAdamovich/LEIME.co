@@ -3,8 +3,7 @@ import 'styles/globals.scss';
 import React from 'react';
 import { Inter } from 'next/font/google';
 import type { Metadata } from 'next';
-import { PageWrapper } from 'components';
-import { Footer, Header } from 'modules';
+import { Footer, Header, PageWrapper } from 'components';
 
 import { Providers } from './providers';
 

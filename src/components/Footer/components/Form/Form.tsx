@@ -3,19 +3,21 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { Button, TextField } from '@mui/material';
 import { Controller, FormProvider, SubmitHandler, useForm } from 'react-hook-form';
 import { z } from 'zod';
-import { contactFormSchema } from 'validators';
 
 import styles from './styles.module.scss';
+import { contactFormSchema } from './validators';
+
+type IFormInput = {
+  name: string;
+  email: string;
+  message?: string;
+};
+
+type NewType = typeof contactFormSchema;
+
+type ValidationSchema = z.infer<NewType>;
 
 function Form() {
-  type ValidationSchema = z.infer<typeof contactFormSchema>;
-
-  type IFormInput = {
-    name: string;
-    email: string;
-    message?: string;
-  };
-
   const methods = useForm<ValidationSchema>({
     resolver: zodResolver(contactFormSchema),
     defaultValues: {
