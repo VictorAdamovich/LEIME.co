@@ -4,14 +4,13 @@
 .info {
   .logo {
     margin-bottom: 10.5px;
-    color: #8C8C8C;
+    color: $liteGray;
   }
 
   .contactsWrapper {
     display: flex;
     margin-bottom: 25.5px;
     gap: 44px;
-
     @include media-breakpoint-down($layoutBreakpointMedium) {
       justify-content: center;
       margin-bottom: 0;
@@ -20,7 +19,7 @@
     .address,
     .contacts {
       text-align: left;
-      color: #8C8C8C;
+      color: $liteGray;
       font-family: Arial;
       font-size: 16px;
       font-weight: 400;
@@ -28,7 +27,7 @@
 
       .title {
         text-align: left;
-        color: #FFF;
+        color: $white;
         font-family: Arial;
         font-size: 16px;
         font-weight: 700;
@@ -66,7 +65,6 @@
   .social {
     display: flex;
     gap: 10px;
-
     @include media-breakpoint-down($layoutBreakpointMedium) {
       display: none;
     }

@@ -13,7 +13,7 @@
     text-align: left;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: #FFF;
+    color: $white;
     font-family: Arial;
     font-size: 16px;
     font-weight: 700;
@@ -43,7 +43,7 @@
           margin-bottom: 2px;
           text-align: left;
           letter-spacing: .3px;
-          color: #808080;
+          color: $lightGray;
           font-family: Arial;
           font-size: 12px;
           font-weight: 400;
@@ -57,7 +57,7 @@
         .postTitle {
           text-align: left;
           letter-spacing: .3px;
-          color: #FFF;
+          color: $white;
           font-family: Arial;
           font-size: 17px;
           font-weight: 400;

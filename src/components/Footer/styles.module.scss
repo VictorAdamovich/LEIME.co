@@ -3,7 +3,7 @@
 
 .wrapper {
   padding: 26px 84px;
-  background-color: #303030;
+  background-color: $darkGray;
   @include media-breakpoint-down($layoutBreakpointMedium) {
     padding: 48px 48px 22px;
   }
