@@ -1,7 +1,6 @@
 import React, { memo } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { Button, TextField } from '@mui/material';
-import { Controller, FormProvider, SubmitHandler, useForm } from 'react-hook-form';
+import { FormProvider, SubmitHandler, useForm } from 'react-hook-form';
 import { z } from 'zod';
 
 import styles from './styles.module.scss';
@@ -28,7 +27,6 @@ function Form() {
   });
 
   const {
-    control,
     handleSubmit,
     formState: { errors },
   } = methods;
@@ -46,67 +44,43 @@ function Form() {
       <h5 className={styles.title}>Contact us</h5>
       <div className={styles.form}>
         <FormProvider {...methods}>
-          <Controller
-            name="name"
-            control={control}
-            render={({ field }) => (
-              <TextField
-                {...field}
-                className={styles.textField}
-                autoComplete="off"
-                error={!!errors?.name?.message}
-                helperText={errors?.name?.message}
-                fullWidth
-                label="Your Name*:"
-                variant="outlined"
-              />
-            )}
-          />
-
-          <Controller
-            name="email"
-            control={control}
-            render={({ field }) => (
-              <TextField
-                {...field}
-                className={styles.textField}
-                autoComplete="off"
-                error={!!errors?.email?.message}
-                helperText={errors?.email?.message}
-                fullWidth
-                label="Your Email:"
-                variant="outlined"
-              />
-            )}
-          />
-
-          <Controller
-            name="message"
-            control={control}
-            render={({ field }) => (
-              <TextField
-                {...field}
-                className={styles.textField}
-                autoComplete="off"
-                error={!!errors?.message?.message}
-                helperText={errors?.message?.message}
-                fullWidth
-                label="Message"
-                variant="outlined"
-              />
-            )}
-          />
-
-          <Button
+          <div>
+            <input
+              className={styles.textField}
+              autoComplete="off"
+              {...methods.register('name')}
+              type="text"
+              placeholder="Your Name*"
+            />
+            {errors.name && <p className={styles.error}>{errors.name.message}</p>}
+          </div>
+          <div>
+            <input
+              className={styles.textField}
+              autoComplete="off"
+              {...methods.register('email')}
+              type="email"
+              placeholder="Your Email"
+            />
+            {errors.email && <p className={styles.error}>{errors.email.message}</p>}
+          </div>
+          <div>
+            <textarea
+              className={styles.textField}
+              autoComplete="off"
+              {...methods.register('message')}
+              placeholder="Message"
+            />
+            {errors.message && <p className={styles.error}>{errors.message.message}</p>}
+          </div>
+          <button
             disabled={hasError}
             onClick={handleSubmit(onSubmit)}
             type="submit"
-            size="large"
-            variant="contained"
             className={styles.submit}
           >
             Submit
-          </Button>
+          </button>
         </FormProvider>
       </div>
     </div>

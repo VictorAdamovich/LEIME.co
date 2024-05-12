@@ -1,4 +1,6 @@
 .contactUS {
+  margin-bottom: 50px;
+
   .title {
     margin-bottom: 20.5px;
     text-align: left;
@@ -18,14 +20,30 @@
     gap: 10px;
 
     .textField {
-      input {
-        border: 2px solid #5A5A5A;
-        border-radius: 4px;
+      width: 100%;
+      padding: 12px 20px;
+      text-align: left;
+      color: #FFF;
+      border: 2px solid #5A5A5A;
+      border-radius: 4px;
+      background-color: transparent;
+      font-family: Arial;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 14.92px;
 
-        &::placeholder {
-          color: #17A2B8;
-        }
+      &::placeholder {
+        color: #FFF
       }
+    }
+
+    .error {
+      text-align: left;
+      color: red;
+      font-family: Arial;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 14.92px;
     }
 
     .submit {
