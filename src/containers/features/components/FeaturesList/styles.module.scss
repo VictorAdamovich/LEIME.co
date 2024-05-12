@@ -1,0 +1,37 @@
+.wrapper {
+  display: grid;
+  grid-gap: 35px;
+  grid-template-columns: repeat(4, 1fr);
+
+  .feature {
+    .iconWrapper {
+      display: flex;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+
+      .icon {
+        margin-bottom: 9.5px;
+      }
+    }
+
+    .title {
+      margin-bottom: 10px;
+      text-align: left;
+      color: #212529;
+      font-family: Arial;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 36px;
+    }
+
+    .description {
+      text-align: left;
+      color: #212529;
+      font-family: Arial;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+  }
+}

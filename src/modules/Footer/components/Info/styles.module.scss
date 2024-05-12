@@ -1,0 +1,42 @@
+.info {
+  .logo {
+    margin-bottom: 10.5px;
+    color: #8C8C8C;
+  }
+
+  .contactsWrapper {
+    display: flex;
+    margin-bottom: 25.5px;
+    gap: 44px;
+
+    .address,
+    .contacts {
+      text-align: left;
+      color: #8C8C8C;
+      font-family: Arial;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+
+      .title {
+        text-align: left;
+        color: #FFF;
+        font-family: Arial;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+      }
+    }
+  }
+
+  .social {
+    display: flex;
+    gap: 10px;
+
+    .socialIcon {
+      img {
+        border-radius: 50%;
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+.contactUS {
+  .title {
+    margin-bottom: 20.5px;
+    text-align: left;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #FFF;
+    font-family: Arial;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+    gap: 10px;
+
+    .textField {
+      input {
+        border: 2px solid #5A5A5A;
+        border-radius: 4px;
+
+        &::placeholder {
+          color: #17A2B8;
+        }
+      }
+    }
+
+    .submit {
+      width: 112px;
+      height: 52px;
+      padding: 11px 32px 22px;
+      text-align: center;
+      letter-spacing: .8px;
+      border: 1px solid #17A2B8;
+      background: #43CBCB;
+      font-family: Arial;
+      font-size: 12px;
+      font-weight: 700;
+    }
+  }
+}

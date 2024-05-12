@@ -1,0 +1,64 @@
+.blog {
+  display: flex;
+  flex-direction: column;
+
+  .title {
+    margin-bottom: 20.5px;
+    text-align: left;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #FFF;
+    font-family: Arial;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+
+  .posts {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .post {
+      display: flex;
+
+      .image {
+        margin-right: 20px;
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .postDate {
+          display: flex;
+          align-items: center;
+          margin-bottom: 2px;
+          text-align: left;
+          letter-spacing: .3px;
+          color: #808080;
+          font-family: Arial;
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 18px;
+
+          .arrow {
+            margin-right: 4px;
+          }
+        }
+
+        .postTitle {
+          text-align: left;
+          letter-spacing: .3px;
+          color: #FFF;
+          font-family: Arial;
+          font-size: 17px;
+          font-weight: 400;
+          line-height: 25.5px;
+        }
+      }
+    }
+
+  }
+}

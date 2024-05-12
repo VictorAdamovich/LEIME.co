@@ -1,0 +1,15 @@
+.list {
+  display: flex;
+  list-style-type: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  gap: 35px;
+
+  .listItem {
+    border-bottom: 2px solid transparent;
+
+    &.active {
+      border-bottom: 2px solid #17BFBF;
+    }
+  }
+}

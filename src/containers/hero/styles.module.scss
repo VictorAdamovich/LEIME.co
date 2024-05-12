@@ -1,0 +1,45 @@
+@import 'styles/helpers/variables';
+@import 'styles/helpers/typography';
+
+.wrapper {
+  position: relative;
+
+  .slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 611px;
+    max-height: 100vh;
+    color: #FFF;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 50px;
+    font-weight: 500;
+    @include media-breakpoint-down($layoutBreakpointLarge) {
+      height: 482px;
+    }
+    @include media-breakpoint-down($layoutBreakpointMedium) {
+      height: 361px;
+    }
+    @include media-breakpoint-down($layoutBreakpointSmall) {
+      height: 183px;
+    }
+  }
+
+
+
+
+  .left,
+  .right {
+    position: absolute;
+    top: 50%;
+  }
+
+  .left {
+    left: 30px;
+  }
+
+  .right {
+    right: 30px;
+  }
+}
