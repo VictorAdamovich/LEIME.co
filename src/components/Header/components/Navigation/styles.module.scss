@@ -1,4 +1,5 @@
 @import 'styles/helpers/variables';
+@import 'styles/helpers/typography';
 
 .list {
   display: flex;
@@ -6,9 +7,16 @@
   text-transform: uppercase;
   font-weight: 700;
   gap: 35px;
+  @include media-breakpoint-down($layoutBreakpointMedium) {
+    display: flex;
+    flex-direction: column;
+    margin-top: 35px;
+    padding: 0 16px;
+  }
 
   .listItem {
     position: relative;
+    width: fit-content;
     border-bottom: 2px solid transparent;
 
     .link {

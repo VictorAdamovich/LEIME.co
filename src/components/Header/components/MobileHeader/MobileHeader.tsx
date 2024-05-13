@@ -20,7 +20,7 @@ function MobileHeader() {
       <button type="button" className={styles.burgerWrapper} onClick={handleOpen}>
         <div className={clsx(styles.burger, { [styles.active]: isOpen })} />
       </button>
-      <div className={styles.mobileNavigation}>
+      <div className={clsx(styles.mobileNavigation, { [styles.active]: isOpen })}>
         <Navigation navigation={navigation} />
       </div>
     </div>

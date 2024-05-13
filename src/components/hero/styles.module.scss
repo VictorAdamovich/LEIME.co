@@ -3,7 +3,11 @@
 
 .wrapper {
   position: relative;
+  margin-top: 112px;
   margin-bottom: 96px;
+  @include media-breakpoint-down($layoutBreakpointMedium) {
+    margin-top: 56px;
+  }
 
   .slide {
     display: flex;
