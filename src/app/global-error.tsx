@@ -21,8 +21,7 @@ export default function GlobalError({
   }, [error]);
 
   return (
-    // eslint-disable-next-line jsx-a11y/html-has-lang
-    <html>
+    <html lang="en">
       <body>
         <h2>Something went wrong!</h2>
         <button type="button" onClick={() => reset()}>

@@ -26,6 +26,7 @@ const SentryOptions = {
 const nextConfig = {
     trailingSlash: true,
     output: 'standalone',
+    output: 'export',
     images: {
         domains: ['**'],
     },

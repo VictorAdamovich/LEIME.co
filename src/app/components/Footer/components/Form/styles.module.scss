@@ -59,8 +59,9 @@
       padding: 11px 32px 22px;
       text-align: center;
       letter-spacing: .8px;
-      border: 1px solid #17A2B8;
-      background: #43CBCB;
+      border: 1px solid $azurSecond;
+      border-radius: 4px;
+      background: $azurThird;
       font-family: Arial;
       font-size: 12px;
       font-weight: 700;
