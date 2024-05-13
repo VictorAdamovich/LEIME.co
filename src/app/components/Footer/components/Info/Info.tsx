@@ -1,7 +1,7 @@
 import React, { memo } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Logo } from 'components';
+import { Logo } from 'app/components';
 import { ImageType } from 'types';
 
 import styles from './styles.module.scss';

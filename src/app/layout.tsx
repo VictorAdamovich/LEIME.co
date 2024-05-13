@@ -2,8 +2,8 @@ import 'styles/globals.scss';
 
 import React from 'react';
 import { Inter } from 'next/font/google';
+import { Footer, Header, PageWrapper } from 'app/components';
 import type { Metadata } from 'next';
-import { Footer, Header, PageWrapper } from 'components';
 
 import { Providers } from './providers';
 

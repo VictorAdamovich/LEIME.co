@@ -2,7 +2,7 @@
 
 import React, { memo } from 'react';
 import { useWindowSize } from '@uidotdev/usehooks';
-import { Logo } from 'components';
+import { Logo } from 'app/components';
 
 import { MobileHeader, Navigation } from './components';
 import { CONTENT } from './content';

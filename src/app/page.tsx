@@ -1,4 +1,4 @@
-import { Features, Hero, Projects } from 'components';
+import { Features, Hero, Projects } from './components';
 
 export default function Home() {
   return (
