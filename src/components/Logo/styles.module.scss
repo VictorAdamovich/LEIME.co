@@ -1,11 +1,12 @@
 @import 'styles/helpers/variables';
-@import 'styles/helpers/typography';
+@import 'styles/helpers/mixins';
 
 .logo {
   display: flex;
   align-items: center;
   color: #212529;
   gap: 8px;
+
   @include media-breakpoint-down($layoutBreakpointMedium) {
     flex-direction: column;
     gap: 12px;

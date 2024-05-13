@@ -1,8 +1,9 @@
 @import 'styles/helpers/variables';
-@import 'styles/helpers/typography';
+@import 'styles/helpers/mixins';
 
 .contactUS {
   margin-bottom: 50px;
+
   @include media-breakpoint-down($layoutBreakpointMedium) {
     display: none;
   }

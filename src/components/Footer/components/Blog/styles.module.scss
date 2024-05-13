@@ -1,9 +1,10 @@
 @import 'styles/helpers/variables';
-@import 'styles/helpers/typography';
+@import 'styles/helpers/mixins';
 
 .blog {
   display: flex;
   flex-direction: column;
+
   @include media-breakpoint-down($layoutBreakpointMedium) {
     display: none;
   }

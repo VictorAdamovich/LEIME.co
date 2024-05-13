@@ -1,5 +1,5 @@
 @import 'styles/helpers/variables';
-@import 'styles/helpers/typography';
+@import 'styles/helpers/mixins';
 
 .wrapper {
   display: grid;
@@ -7,6 +7,7 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   justify-items: center;
+
   @include media-breakpoint-down($layoutBreakpointLarge) {
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -26,6 +27,7 @@
       grid-row: 2;
     }
   }
+
   @include media-breakpoint-down($layoutBreakpointMedium) {
     grid-template-columns: 1fr;
 

@@ -1,9 +1,10 @@
 @import 'styles/helpers/variables';
-@import 'styles/helpers/typography';
+@import 'styles/helpers/mixins';
 
 .wrapper {
   padding: 26px 84px;
   background-color: $darkGray;
+
   @include media-breakpoint-down($layoutBreakpointMedium) {
     padding: 48px 48px 22px;
   }
@@ -11,11 +12,13 @@
   .content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+
     @include media-breakpoint-down($layoutBreakpointLarge) {
       grid-template-columns: repeat(2, 1fr);
       gap: 50px;
       justify-self: center;
     }
+
     @include media-breakpoint-down($layoutBreakpointMedium) {
       grid-template-columns: 1fr;
     }
